@@ -2,6 +2,7 @@ const express = require("express");
 const path = require("path");
 const http = require("http");
 const SocketIO = require("socket.io");
+require("dotenv").config();
 
 const { connectDb } = require("./database/db");
 
@@ -10,6 +11,8 @@ const app = express();
 
 // Database
 connectDb();
+
+console.log(process.env.PORT);
 
 // Settings
 const pathPublic = path.resolve(__dirname, "../public");
