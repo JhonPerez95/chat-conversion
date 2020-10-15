@@ -12,8 +12,6 @@ const app = express();
 // Database
 connectDb();
 
-console.log(process.env.PORT);
-
 // Settings
 const pathPublic = path.resolve(__dirname, "../public");
 const port = process.env.PORT || 3000;
